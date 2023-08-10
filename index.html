@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta name="renderer" content="webkit" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <meta name="keywords"
+        content="Editor.md,editor,Markdown Editor,Markdown,编辑器,Markdown编辑器,Markdown在线编辑器,在线编辑器,开源编辑器,开源Markdown编辑器" />
+    <meta name="description" content="Editor.md: a simple online markdown editor. 开源在线 Markdown 编辑器" />
+    <title>在线 Markdown 编辑器-SHSSEDU</title>
+    <!-- Favicon  -->
+    <link rel="shortcut icon" type="image/x-icon"
+        href="https://jsd.onmicrosoft.cn/gh/SHSSEDU/LOGO@main/LOGO-removebg.png">
+    <link rel="stylesheet" href="https://gcore.jsdelivr.net/gh/SHSSEDU/editor.md@master/examples/css/style.css" />
+    <link rel="stylesheet" href="https://gcore.jsdelivr.net/gh/SHSSEDU/editor.md@master/css/editormd.css" />
+
+</head>
+
+<body>
+    <div id="layout">
+        <header>
+            <h1>在线 Markdown 编辑器-<a href="https://shssedu.ac.cn/">SHSSEDU</a></h1>
+        </header>
+        <div id="test-editormd">
+            <textarea style="display:none;">
+# 欢迎使用在线 Markdown 编辑器-SHSSEDU
+- 支持“标准” Markdown / CommonMark 和 Github 风格的语法，也可变身为代码编辑器；
+- 支持实时预览、图片（跨域）上传、预格式文本/代码/表格插入、代码折叠、搜索替换、只读模式、自定义样式主题和多语言语法高亮等功能；
+- 支持 ToC 目录（Table of Contents）、Emoji 表情、Task lists、@链接等 Markdown 扩展语法；
+- 支持 TeX 科学公式（基于 KaTeX）、流程图 Flowchart 和 时序图 Sequence Diagram;
+- 支持识别和解析 HTML 标签，并且支持自定义过滤标签解析，具有可靠的安全性和几乎无限的扩展性；
+- 支持 AMD / CMD 模块化加载（支持 Require.js & Sea.js），并且支持自定义扩展插件；
+- 兼容主流的浏览器（IE8+）和 Zepto.js，且支持 iPad 等平板设备；
+
+</textarea>
+        </div>
+    </div>
+    <script src="https://cdnjs.loli.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://gcore.jsdelivr.net/gh/SHSSEDU/editor.md@master/src/editormd.js"></script>
+    <script type="text/javascript">
+        var testEditor;
+
+        $(function () {
+            testEditor = editormd("test-editormd", {
+                width: "99%",
+                height: 750,
+                syncScrolling: "single",
+                path: "https://pandao.github.io/editor.md/lib/"
+            });
+
+            /*
+            // or
+            testEditor = editormd({
+                id      : "test-editormd",
+                width   : "90%",
+                height  : 640,
+                path    : "../lib/"
+            });
+            */
+        });
+    </script>
+
+</body>
+
+</html>
